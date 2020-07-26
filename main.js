@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron')
 const log = require('electron-log');
 const { autoUpdater } = require("electron-updater")
+const windowStateKeeper = require('electron-window-state');
 
 autoUpdater.logger = log
 autoUpdater.logger.transports.file.level = 'info'
