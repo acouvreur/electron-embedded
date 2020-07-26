@@ -1,4 +1,10 @@
 const { app, BrowserWindow } = require('electron')
+const log = require('electron-log');
+const { autoUpdater } = require("electron-updater")
+
+autoUpdater.logger = log
+autoUpdater.logger.transports.file.level = 'info'
+log.info('App starting...')
 
 function createWindow() {
   // Create the browser window.
@@ -33,10 +39,34 @@ function waitForServerToBeUpAndRunning() {
 
 }
 
+autoUpdater.on('checking-for-update', () => {
+  log.info('Checking for update...');
+})
+autoUpdater.on('update-available', (info) => {
+  log.info('Update available.');
+})
+autoUpdater.on('update-not-available', (info) => {
+  log.info('Update not available.');
+})
+autoUpdater.on('error', (err) => {
+  log.info('Error in auto-updater. ' + err);
+})
+autoUpdater.on('download-progress', (progressObj) => {
+  let log_message = "Download speed: " + progressObj.bytesPerSecond;
+  log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
+  log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
+  log.info(log_message);
+})
+autoUpdater.on('update-downloaded', (info) => {
+  log.info('Update downloaded');
+});
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
+
+  autoUpdater.checkForUpdatesAndNotify();
 
   if (process.env.NODE_ENV !== 'development') {
     createServer()

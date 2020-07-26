@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "backend": "file:backend",
+    "electron-log": "^4.2.2",
     "electron-updater": "^4.3.1"
   },
   "build": {
