@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/acouvreur/electron-embedded/compare/v2.3.0...v2.3.1) (2020-07-26)
+
+
+### Bug Fixes
+
+* added missing import ([05501f3](https://github.com/acouvreur/electron-embedded/commit/05501f3209695a61bdc48a1687d054965e19aa56))
+
 # [2.3.0](https://github.com/acouvreur/electron-embedded/compare/v2.2.2...v2.3.0) (2020-07-26)
 
 
