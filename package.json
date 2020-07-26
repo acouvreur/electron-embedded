@@ -34,10 +34,8 @@
       "!frontend/{node_modules,src,public}",
       "!backend"
     ],
-    "win": {
-      "publish": [
-        "github"
-      ]
-    }
+    "publish": [
+      "github"
+    ]
   }
 }
