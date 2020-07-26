@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/acouvreur/electron-embedded/compare/v2.2.2...v2.3.0) (2020-07-26)
+
+
+### Features
+
+* add window state management ([f4e09d5](https://github.com/acouvreur/electron-embedded/commit/f4e09d50d5130cb8ba0e6c083c8ece343659cc02))
+
 ## [2.2.2](https://github.com/acouvreur/electron-embedded/compare/v2.2.1...v2.2.2) (2020-07-26)
 
 
