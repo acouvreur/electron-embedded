@@ -4,11 +4,11 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "build-frontend-with-version": "cross-env REACT_APP_VERSION=$npm_package_version npm run build --prefix frontend",
-    "prestart": "npm run build-frontend-with-version",
+    "build": "cross-env REACT_APP_VERSION=$npm_package_version npm run build --prefix frontend",
+    "prestart": "npm run build",
     "start": "electron .",
     "start:dev": "cross-env NODE_ENV=development electron .",
-    "predist": "npm run build-frontend-with-version",
+    "predist": "npm run build",
     "dist": "electron-builder",
     "release": "electron-builder --publish always"
   },
