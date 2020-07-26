@@ -8,11 +8,12 @@ function createWindow() {
   })
 
   // and load the index.html of the app.
-  win.loadFile('frontend/build/index.html')
-  // win.loadURL('http://localhost:3000')
-
-  // Open the DevTools.
-  win.webContents.openDevTools()
+  if (process.env.NODE_ENV === 'development') {
+    win.loadURL('http://localhost:3000')
+    win.webContents.openDevTools()
+  } else {
+    win.loadFile('frontend/build/index.html')
+  }
 
   win.on('closed', () => {
     app.quit()
@@ -36,8 +37,11 @@ function waitForServerToBeUpAndRunning() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  createServer()
-  waitForServerToBeUpAndRunning()
+
+  if (process.env.NODE_ENV !== 'development') {
+    createServer()
+    waitForServerToBeUpAndRunning()
+  }
   createWindow()
 })
 
