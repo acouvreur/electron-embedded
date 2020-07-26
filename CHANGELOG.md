@@ -1,3 +1,10 @@
+## [2.4.1](https://github.com/acouvreur/electron-embedded/compare/v2.4.0...v2.4.1) (2020-07-26)
+
+
+### Bug Fixes
+
+* move electron-debug to dependencies ([0a57643](https://github.com/acouvreur/electron-embedded/commit/0a57643d2a53a462d08fbca63702eb72fca521ba))
+
 # [2.4.0](https://github.com/acouvreur/electron-embedded/compare/v2.3.1...v2.4.0) (2020-07-26)
 
 
