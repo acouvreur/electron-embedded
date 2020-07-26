@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/acouvreur/electron-embedded/compare/v2.2.1...v2.2.2) (2020-07-26)
+
+
+### Bug Fixes
+
+* set homepage in frontend package.json ([fd85376](https://github.com/acouvreur/electron-embedded/commit/fd85376f4bd825fa3b1e60e8d07f1020f526261f))
+
 ## [2.2.1](https://github.com/acouvreur/electron-embedded/compare/v2.2.0...v2.2.1) (2020-07-26)
 
 
