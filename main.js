@@ -7,11 +7,21 @@ autoUpdater.logger.transports.file.level = 'info'
 log.info('App starting...')
 
 function createWindow() {
+
+  let mainWindowState = windowStateKeeper({
+    defaultWidth: 1000,
+    defaultHeight: 800
+  });
+
   // Create the browser window.
   const win = new BrowserWindow({
-    width: 800,
-    height: 600
-  })
+    'x': mainWindowState.x,
+    'y': mainWindowState.y,
+    'width': mainWindowState.width,
+    'height': mainWindowState.height
+  });
+
+  mainWindowState.manage(win);
 
   // and load the index.html of the app.
   if (process.env.NODE_ENV === 'development') {
