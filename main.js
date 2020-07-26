@@ -2,6 +2,21 @@ const { app, BrowserWindow } = require('electron')
 const log = require('electron-log');
 const { autoUpdater } = require("electron-updater")
 const windowStateKeeper = require('electron-window-state');
+const debug = require('electron-debug');
+const unhandled = require('electron-unhandled');
+const { openNewGitHubIssue, debugInfo } = require('electron-util');
+
+unhandled({
+  reportButton: error => {
+    openNewGitHubIssue({
+      user: 'acouvreur',
+      repo: 'electron-embedded',
+      body: `\`\`\`\n${error.stack}\n\`\`\`\n\n---\n\n${debugInfo()}`
+    });
+  }
+});
+
+debug();
 
 autoUpdater.logger = log
 autoUpdater.logger.transports.file.level = 'info'
