@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/acouvreur/electron-embedded/compare/v2.3.1...v2.4.0) (2020-07-26)
+
+
+### Features
+
+* add report on unhandled crash ([273727c](https://github.com/acouvreur/electron-embedded/commit/273727c8cbe046e8c2948095f5090acdfc338f7b))
+
 ## [2.3.1](https://github.com/acouvreur/electron-embedded/compare/v2.3.0...v2.3.1) (2020-07-26)
 
 
