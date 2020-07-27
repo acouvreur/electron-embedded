@@ -1,6 +1,7 @@
 import React from 'react';
 import Content from './Content'
 import { Typography, Link, Container, Box } from '@material-ui/core';
+import Heroes from './Heroes';
 
 function Copyright() {
   return (
@@ -23,6 +24,7 @@ function App() {
           Create React App v4-beta example
         </Typography>
         <Content />
+        <Heroes />
         <Copyright />
       </Box>
     </Container>

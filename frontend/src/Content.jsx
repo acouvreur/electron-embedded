@@ -4,13 +4,22 @@ import './Content.css';
 import { Button } from "@material-ui/core";
 
 const Content = () => {
+
+  const {
+    addRxPlugin
+  } = require('rxdb');
+  addRxPlugin(require('pouchdb-adapter-idb'));
+
   const [data, setData] = useState(null);
+
   const fetchData = useCallback(() => {
     setData(null)
     fetch('http://localhost:4000/')
       .then(res => res.json())
       .then(data => setData(data));
   }, []);
+
+
 
   useEffect(() => {
     if (!data) {
