@@ -1,37 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Content from './Content'
+import { Typography, Link, Container, Box } from '@material-ui/core';
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://www.alexiscouvreur.com/">
+        Alexis Couvreur
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}  Version {process.env.REACT_APP_VERSION}
+    </Typography>
+  );
+}
 
 function App() {
-
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    if (!data) {
-      fetch('http://localhost:4000/')
-        .then(res => res.json())
-        .then(data => setData(data));
-    }
-  })
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Version {process.env.REACT_APP_VERSION}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {data ?? 'Loading...'}
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      <Box my={4}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Create React App v4-beta example
+        </Typography>
+        <Content />
+        <Copyright />
+      </Box>
+    </Container>
   );
 }
 
