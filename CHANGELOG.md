@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/acouvreur/electron-embedded/compare/v2.4.1...v2.5.0) (2020-07-27)
+
+
+### Features
+
+* add material ui ([ef021b6](https://github.com/acouvreur/electron-embedded/commit/ef021b6fe4e66086661907288ca9f9e4a59ced7b))
+
 ## [2.4.1](https://github.com/acouvreur/electron-embedded/compare/v2.4.0...v2.4.1) (2020-07-26)
 
 
