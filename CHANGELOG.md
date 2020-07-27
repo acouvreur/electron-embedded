@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/acouvreur/electron-embedded/compare/v2.5.0...v2.6.0) (2020-07-27)
+
+
+### Features
+
+* add rxdb ([16167f5](https://github.com/acouvreur/electron-embedded/commit/16167f56c885d948027ee0c413f685823afbaca9))
+
 # [2.5.0](https://github.com/acouvreur/electron-embedded/compare/v2.4.1...v2.5.0) (2020-07-27)
 
 
