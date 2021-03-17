@@ -14,7 +14,7 @@ const Content = () => {
 
   const fetchData = useCallback(() => {
     setData(null)
-    fetch('http://localhost:4000/')
+    fetch('http://localhost:10200/')
       .then(res => res.json())
       .then(data => setData(data));
   }, []);

@@ -55,7 +55,7 @@ function createWindow() {
 function createServer() {
   const serverWindow = new BrowserWindow({
     show: false,
-    webPreferences: { nodeIntegration: true }
+    webPreferences: { nodeIntegration: true, contextIsolation: false }
   });
 
   serverWindow.loadFile('./server.html')
